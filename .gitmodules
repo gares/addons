@@ -10,6 +10,10 @@
 	path = elpi
     url = git@github.com:jscoq/addon-elpi.git
     branch = elpi-1.14-8.16
+[submodule "hierarchy-builder"]
+	path = hierarchy-builder
+    url = git@github.com:jscoq/addon-hierarchy-builder.git
+    branch = master
 [submodule "equations"]
 	path = equations
     url = git@github.com:jscoq/addon-equations.git
