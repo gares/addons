@@ -1,7 +1,7 @@
 PKGS = elpi equations extlib simpleio mathcomp mathcomp-extra quickchick software-foundations \
 	   hahn paco snu-sflib promising fcsl-pcm htt pnp coqoban stdpp iris
 
-CONTEXT = jscoq+32bit
+CONTEXT = wacoq
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)
 CONTEXT = jscoq+64bit
 endif
@@ -46,25 +46,9 @@ MSG = ${error MSG= is mandatory}
 endif
 
 world:
-	cd elpi               && make && make install    # required by mathcomp-extra
-	cd equations          && make
-	cd extlib             && make && make install    # required by SimpleIO
-	cd simpleio           && make && make install    # required by QuickChick
-	cd mathcomp           && make && make install    # required by QuickChick, FCSL-PCM, HTT
-	cd mathcomp-extra     && make
-	cd quickchick         && make
-	cd hahn               && make
-	cd paco               && make
-	cd snu-sflib          && make
-	cd fcsl-pcm           && make && make install    # required by HTT
-	cd htt                && make && make install    # required by PnP
-	cd pnp                && make
-	cd coqoban            && make
-	cd stdpp              && make && make install    # required by Iris
-	cd iris               && make
-ifneq ($(filter software-foundations, $(WITH_PRIVATE)),)
-	cd software-foundations && make
-endif
+	cd elpi               && make && make install
+	cd hierarchy-builder  && make && make install
+	cd mathcomp           && make && make install
 
 privates:
 ifneq ($(filter software-foundations, $(WITH_PRIVATE)),)
