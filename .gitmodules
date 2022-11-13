@@ -1,6 +1,6 @@
 [submodule "mathcomp"]
 	path = mathcomp
-	url = git@github.com:jscoq/addon-mathcomp
+	url = git@github.com:gares/addon-mathcomp.git
 	branch = hierarchy-builder
 [submodule "elpi"]
 	path = elpi
