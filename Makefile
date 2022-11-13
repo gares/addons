@@ -1,5 +1,4 @@
-PKGS = elpi equations extlib simpleio mathcomp mathcomp-extra quickchick software-foundations \
-	   hahn paco snu-sflib promising fcsl-pcm htt pnp coqoban stdpp iris
+PKGS = elpi mathcomp hierarchy-builder
 
 CONTEXT = wacoq
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)
@@ -49,11 +48,6 @@ world:
 	cd elpi               && make && make install
 	cd hierarchy-builder  && make && make install
 	cd mathcomp           && make && make install
-
-privates:
-ifneq ($(filter software-foundations, $(WITH_PRIVATE)),)
-	cd software-foundations && make
-endif
 
 .PHONY: %
 
