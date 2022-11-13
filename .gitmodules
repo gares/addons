@@ -8,5 +8,5 @@
     branch = master
 [submodule "hierarchy-builder"]
 	path = hierarchy-builder
-    url = git@github.com:gares/addon-hierarchy-builder.git
+	url = git@github.com:gares/addon-hierarchy-builder.git
     branch = master
