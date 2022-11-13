@@ -7,6 +7,7 @@ endif
 ifeq ($(DUNE_WORKSPACE:%.wacoq=wacoq), wacoq)
 CONTEXT = wacoq
 endif
+export CONTEXT
 
 # needed when invoking `opam install`
 OPAMSWITCH = $(CONTEXT)
