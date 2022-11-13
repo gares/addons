@@ -46,8 +46,8 @@ endif
 
 world:
 	cd elpi               && make && make install
-	cd hierarchy-builder  && make && make install
-	cd mathcomp           && make && make install
+	#cd hierarchy-builder  && make && make install
+	#cd mathcomp           && make && make install
 
 .PHONY: %
 
