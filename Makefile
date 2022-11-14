@@ -54,7 +54,7 @@ hierarchy-builder:
 mathcomp:
 	cd mathcomp           && make && make install
 
-.PHONY: %
+.PHONY: elpi hierarchy-builder mathcomp
 
 env:
 	@echo export DUNE_WORKSPACE=$(DUNE_WORKSPACE)
