@@ -38,7 +38,7 @@ ifneq ($(_V),)
 MSG = [deploy] Prepare for $(_V).
 else
 ifeq ($(CONTEXT), wacoq)
-_V = ${shell wacoq --version}
+_V = 0.15.0
 else
 _V = ${shell jscoq --version}
 endif
