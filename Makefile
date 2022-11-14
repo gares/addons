@@ -45,9 +45,13 @@ endif
 MSG = ${error MSG= is mandatory}
 endif
 
-world:
+elpi:
 	cd elpi               && make && make install
+
+hierarchy-builder:
 	cd hierarchy-builder  && make && make install
+
+mathcomp:
 	cd mathcomp           && make && make install
 
 .PHONY: %
