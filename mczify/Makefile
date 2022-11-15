@@ -15,7 +15,7 @@ get: $(WORKDIR)
 
 $(WORKDIR):
 	git clone --depth=1 -b $(TAG) $(REPO) $(WORKDIR)
-	cd $(WORKDIR) && patch -p1 ../disable-binary-nums.diff
+	cd $(WORKDIR) && patch -p1 < ../disable-binary-nums.diff
 
 clean:
 	make -C $(WORKDIR) clean
