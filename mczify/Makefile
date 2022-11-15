@@ -5,7 +5,7 @@ WORKDIR = workdir
 .PHONY: all get prepare
 
 all: $(WORKDIR) prepare
-	make -C $(WORKDIR) build
+	make -C $(WORKDIR)
 	rm -rf ../_build/$(CONTEXT)/mczify/ && cp -r . ../_build/$(CONTEXT)/mczify/
 	(cd ../_build/$(CONTEXT)/mczify; npx jscoq build --workspace mczify.json)
 

@@ -5,7 +5,7 @@ WORKDIR = workdir
 .PHONY: all get prepare
 
 all: $(WORKDIR) prepare
-	make -C $(WORKDIR) build
+	make -C $(WORKDIR)
 	rm -rf ../_build/$(CONTEXT)/algebra-tactics/ && cp -r . ../_build/$(CONTEXT)/algebra-tactics/
 	(cd ../_build/$(CONTEXT)/algebra-tactics; npx jscoq build --workspace algebra-tactics.json)
 
