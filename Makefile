@@ -54,7 +54,11 @@ hierarchy-builder:
 mathcomp:
 	cd mathcomp           && make && make install
 
-.PHONY: elpi hierarchy-builder mathcomp
+algebra-tactics:
+	cd algebra-tactics    && make && make install
+
+
+.PHONY: elpi hierarchy-builder mathcomp algebra-tactics
 
 env:
 	@echo export DUNE_WORKSPACE=$(DUNE_WORKSPACE)

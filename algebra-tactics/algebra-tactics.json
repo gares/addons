@@ -1,0 +1,12 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "projects": {
+            "algebra-tactics": {
+                "theories": {
+                    "prefix": "mathcomp.algebra_tactics",
+                    "dirpaths": [{"logical": "", "rec": false}]
+            }
+    }
+}
+}

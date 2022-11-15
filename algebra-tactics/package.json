@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/algebra-tactics",
+    "description": "coq-mathcomp-algebra-tactics 0.4.0 for jsCoq",
+    "version": "0.4.0",
+    "files": ["coq-pkgs"],
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/algebra-tactics"
+    },
+    "license": "AGPL-3.0-or-later"
+}
