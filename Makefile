@@ -1,4 +1,4 @@
-PKGS = elpi mathcomp hierarchy-builder
+PKGS = elpi mathcomp hierarchy-builder mczify algebra-tactics
 
 CONTEXT = wacoq
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)

@@ -1,0 +1,36 @@
+diff --git a/theories/zify_ssreflect.v b/theories/zify_ssreflect.v
+index 822fb03..0bd1c9f 100644
+--- a/theories/zify_ssreflect.v
++++ b/theories/zify_ssreflect.v
+@@ -200,7 +200,8 @@ Instance Op_expn_trec : BinOp NatTrec.exp :=
+   { TBOp := Z.pow; TBOpInj n m := ltac:(rewrite NatTrec.expE; lia) }.
+ Add Zify BinOp Op_expn_trec.
+ 
+-Instance Op_eq_op_N : BinOp (eq_op : N -> N -> bool) :=
++(*
++Instance Op_eq_op_N : BinOp (eq_op : rel N) :=
+   { TBOp := Z.eqb; TBOpInj := ltac:(by case => [|n] []) }.
+ Add Zify BinOp Op_eq_op_N.
+ 
+@@ -229,6 +230,7 @@ Add Zify BinOp Op_pos_of_nat.
+ Instance Op_bin_of_nat : UnOp bin_of_nat :=
+   { TUOp := id; TUOpInj n := ltac:(rewrite /= -[n in RHS]bin_of_natK; lia) }.
+ Add Zify UnOp Op_bin_of_nat.
++*)
+ 
+ Instance Op_nat_le : BinOp (<=%O : rel nat) := Op_leq.
+ Add Zify BinOp Op_nat_le.
+@@ -545,11 +547,13 @@ Add Zify UnOp Op_double_trec.
+ Add Zify BinOp Op_expn_rec.
+ Add Zify BinOp Op_expn.
+ Add Zify BinOp Op_expn_trec.
++(*
+ Add Zify BinOp Op_eq_op_N.
+ Add Zify UnOp Op_nat_of_pos.
+ Add Zify UnOp Op_nat_of_bin.
+ Add Zify BinOp Op_pos_of_nat.
+ Add Zify UnOp Op_bin_of_nat.
++*)
+ Add Zify BinOp Op_nat_le.
+ Add Zify BinOp Op_nat_le'.
+ Add Zify BinOp Op_nat_ge.
