@@ -54,11 +54,14 @@ hierarchy-builder:
 mathcomp:
 	cd mathcomp           && make && make install
 
+mczify:
+	cd mczify    && make && make install
+
 algebra-tactics:
 	cd algebra-tactics    && make && make install
 
 
-.PHONY: elpi hierarchy-builder mathcomp algebra-tactics
+.PHONY: elpi hierarchy-builder mathcomp algebra-tactics mczify
 
 env:
 	@echo export DUNE_WORKSPACE=$(DUNE_WORKSPACE)
