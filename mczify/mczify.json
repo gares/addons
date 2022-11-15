@@ -1,0 +1,12 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "projects": {
+            "mczify": {
+                "theories": {
+                    "prefix": "mathcomp.zify",
+                    "dirpaths": [{"logical": "", "rec": false}]
+            }
+    }
+}
+}

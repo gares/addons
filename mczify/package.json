@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/mczify",
+    "description": "coq-mathcomp-mczify 0 for jsCoq",
+    "version": "0",
+    "files": ["coq-pkgs"],
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/mczify"
+    },
+    "license": "AGPL-3.0-or-later"
+}
